@@ -15,12 +15,12 @@ Relatórios Estratégicos: Gere relatórios importantes, como animais abatidos, 
 ## Como Iniciar
 ### Clone o Repositório:
 ```
-git clone https://github.com/seu-usuario/fazenda-bovina-manager.git
+git clone https://github.com/FarleyRS/farm_control.git
 ```
 
 ### Instale as Dependências:
 ```
-cd fazenda-bovina-manager
+cd farm_control
 composer install
 ```
 ### Configure o Ambiente:
