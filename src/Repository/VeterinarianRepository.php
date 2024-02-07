@@ -6,6 +6,7 @@ use App\Entity\Veterinarian;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
+
 /**
  * @extends ServiceEntityRepository<Veterinarian>
  *
@@ -23,6 +24,7 @@ class VeterinarianRepository extends ServiceEntityRepository
 
     public function add(Veterinarian $entity, bool $flush = false): void
     {
+
         $this->getEntityManager()->persist($entity);
 
         if ($flush) {
@@ -38,7 +40,8 @@ class VeterinarianRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
+    
+   
 //    /**
 //     * @return Veterinarian[] Returns an array of Veterinarian objects
 //     */

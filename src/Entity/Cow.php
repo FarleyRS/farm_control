@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\CowRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=CowRepository::class)
@@ -39,6 +40,7 @@ class Cow
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\LessThanOrEqual("today", message = "A data de nascimento não pode ser futura.")
      */
     private $nascimento;
 

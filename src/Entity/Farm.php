@@ -103,6 +103,7 @@ class Farm
     {
         if (!$this->veterinarios->contains($veterinario)) {
             $this->veterinarios[] = $veterinario;
+            $veterinario->addFarm($this);
         }
 
         return $this;
@@ -143,5 +144,10 @@ class Farm
         }
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->getNome(); // Substitua por um método ou propriedade apropriada
     }
 }
